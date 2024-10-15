@@ -1,0 +1,38 @@
+//maximumHappinessSum
+// class Solution {
+// public:
+//     int largestElement(vector<int>& temp) {
+//         int large = 0;
+//         for (int i = 0; i < temp.size(); i++) {
+//             if (temp[i] > large) {
+//                 large = temp[i];
+//             }
+//         }
+//         return large;
+//     }
+
+//     vector<int> decreaseElementValue(vector<int>& temp, int large) {
+//         for (int i = 0; i < temp.size(); i++) {
+//             if (temp[i] == large) {
+//                 temp[i] = 0;
+//                 continue;
+//             }
+//             temp[i] = temp[i] - 1;
+//         }
+//         return temp;
+//     }
+
+//     long long maximumHappinessSum(vector<int>& happiness, int k) {
+//         vector<int> temp = happiness;
+//         long long result = 0;
+//         while (k >= 0) {
+//             int large = largestElement(temp);
+//             result += large;
+//             temp = decreaseElementValue(temp, large);
+//             k--;
+//         }
+
+//         return result;
+//     }
+
+// };
